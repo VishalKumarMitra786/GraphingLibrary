@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="css.css" rel="stylesheet" />
+</head>
+    <body>
+        <div class="span6 inputs">
+            <div data-number="1">
+                <div class="input" id="panel-101-equations">
+                    <label class="">1.</label>
+                    <input type="text" class="txtEquation">
+                </div>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <div class="row-fluid border-top">
+            <div class="span12" id="panel-101-equations">
+                <button class="btnGraph">Graph »</button>
+            </div>
+        </div>
+
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/js-expression-eval/parser.js"></script>
+        <script>
+          
+            $(".btnGraph").click(function() {
+                var expression = $(".txtEquation").val();
+                var expressionObj = Parser.parse(expression);
+                var plotArr = [];
+                var xVal = 6;
+                var yVal = expressionObj.evaluate({ x: xVal });
+                alert(yVal);
+                //alert("hello");
+            });
+        </script>
+    </body>
+</html>

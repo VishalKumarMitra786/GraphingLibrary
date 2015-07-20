@@ -1,0 +1,4 @@
+https://github.com/silentmatt/js-expression-eval/tree/master
+https://github.com/yerich/Graphr
+https://www.youtube.com/watch?v=E-_Lc6FrDRw
+https://github.com/curran/screencasts
