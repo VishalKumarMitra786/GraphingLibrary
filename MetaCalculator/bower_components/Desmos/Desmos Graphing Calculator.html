@@ -1,0 +1,2908 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0033)https://www.desmos.com/calculator -->
+<html no_gl="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+  <!--chrome=1 enables chrome frame; IE=9 keeps IE from rendering in fallback mode.-->
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="Description" content="A beautiful, free, online graphing calculator from desmos.com">
+
+
+  <meta property="og:site_name" content="Desmos Graphing Calculator">
+  <meta property="og:image" content="https://s3.amazonaws.com/desmos/img/calc_thumb.png">
+  <link rel="image_src" href="https://s3.amazonaws.com/desmos/img/calc_thumb.png">
+
+      <!--[if lt IE 10 ]>
+    <link rel="stylesheet" href="/assets/build/ie9-518d4e5ec2bbbbfdc345495e187be36e2febfa06.min.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9, chrome=1" />
+    <![endif]-->
+
+                       <link href="DesmosStyleSheet.css" rel="stylesheet" />
+  <!--<link rel="stylesheet" href="https://www.desmos.com/assets/build/grapher-ac1e8548470f64ef498bd522071608a110edb629.min.css">-->
+
+  <title>Desmos Graphing Calculator</title>
+
+  <link rel="apple-touch-icon-precomposed" href="https://www.desmos.com/assets/img/apple-touch-icon-precomposed.png"> <!-- 57x57 -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://www.desmos.com/assets/img/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://www.desmos.com/assets/img/apple-touch-icon-76x76-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://www.desmos.com/assets/img/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://www.desmos.com/assets/img/apple-touch-icon-120x120-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.desmos.com/assets/img/apple-touch-icon-144x144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://www.desmos.com/assets/img/apple-touch-icon-152x152-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://www.desmos.com/assets/img/apple-touch-icon-180x180-precomposed.png">
+  <link rel="icon" href="https://www.desmos.com/favicon.ico" type="image/x-icon">
+  <link rel="icon" sizes="192x192" href="https://www.desmos.com/assets/img/touch-icon-192x192.png"> <!-- for Chrome on Android -->
+
+</head>
+<body data-load-data="{&quot;graph&quot;: null, &quot;seed&quot;: &quot;da8a87a351374311a173904819cb4e34&quot;, &quot;user&quot;: null}" class="dcg-tap-container">
+
+  <!-- LOGIN MODALS -->
+  <div id="modal_background"></div>
+  <div class="modal" id="state-modals">
+      <span class="close-modal dcg-icon-remove"></span>
+  </div>
+
+  <!-- GRAPHER -->
+  <div class="dcg-sliding-interior">
+    <!-- this is where the tools go. leaving div in because I like it aesthetically during load-up -->
+    <div class="dcg-header"><div class="dcg-header-desktop">
+  <div class="left-floaters">
+    <span class="dcg-header-btn dcg-action-opendrawer dcg-tooltip" tooltip="Open Graph (ctrl+o)">
+      <i class="dcg-icon-hamburger"></i>
+    </span>
+
+    
+      <span class="title-div has-changes">
+        <span class="dcg-variable-title dcg-tooltip dcg-action-savedialog" tooltip="Save As or Rename (ctrl+shift+s)">Untitled Graph</span>
+
+        <span class="dcg-if-user">
+          <span class="dcg-action-save">
+            <span class="save-btn tooltip-offset" tooltip="Save Changes (ctrl+s)">
+              <i class="dcg-icon-save"></i>
+            </span>
+            <span class="saving-notice">
+              <img src="./Desmos Graphing Calculator_files/spinner.gif">
+            </span>
+          </span>
+        </span>
+      </span>
+    
+  </div>
+
+  <div class="right-floaters">
+    <!-- reverse order, because these all float right -->
+
+    <span class="dcg-header-btn dcg-action-language dcg-tooltip" tooltip="Language">
+        <i class="dcg-icon-world"></i>
+    </span>
+    <span class="dcg-header-btn dcg-action-help dcg-tooltip" tooltip="Help">
+        <i class="dcg-icon-question-sign"></i>
+    </span>
+
+    
+      <span class="dcg-if-user">
+        
+          <span class="dcg-btn-group">
+            <span class="dcg-print-btn tooltip-offset dcg-btn dcg-btn-green dcg-action-print" tooltip="Print">
+              <i class="dcg-icon-print"></i>
+            </span>
+            <span class="dcg-share-btn tooltip-offset dcg-btn dcg-btn-green dcg-action-share" tooltip="Share Graph">
+              <i class="dcg-icon-share"></i>
+            </span>
+          </span>
+        
+
+        <span class="dcg-account-link">
+          <span class="dcg-edit-acct-success">
+            <i class="dcg-icon-check"></i> saved
+          </span>
+          <span class="email">
+            <div class="header-account-name dcg-variable-name">
+            </div>
+            <i class="dcg-icon-caret-down"></i>
+          </span>
+        </span>
+      </span>
+      <span class="dcg-unless-user">
+        <span class="dcg-login">
+          <a class="dcg-create-account dcg-btn dcg-btn-green dcg-action-createaccount">Create Account</a>
+          or
+          <a class="dcg-sign-in dcg-action-login">
+            Sign In
+          </a>
+        </span>
+      </span>
+    
+  </div> <!-- end right floaters -->
+
+  
+
+  <div class="dcg-center">
+    <a href="https://www.desmos.com/" target="_blank" class="dcg-home-link-icon" title="dcg-title">
+      <i class="dcg-icon-desmos"></i>
+    </a>
+  </div>
+  <div class="dcg-saving-toast-container dcg-toast-container">
+    <div class="dcg-toast dcg-saving">
+      Saving...
+    </div>
+    <div class="dcg-toast dcg-save-success">
+      Saved!
+    </div>
+    <div class="dcg-toast dcg-save-failure">
+      <i class="dcg-icon-warning"></i>
+      <b>Error Saving.</b>
+      <span class="dcg-link dcg-action-save">Retry now</span>
+      <span class="dcg-link dcg-action-cancel-retry">Cancel</span>
+    </div>
+  </div>
+</div></div>
+
+    <div style="position: absolute; top: 50%; width: 100%; text-align: center; display: none;" class="dcg-loading-div">
+
+      loading...
+
+    </div>
+    <div id="graph-container"><div class="dcg-container dcg-tap-container dcg-wide"><div class="dcg-grapher" style="overflow: hidden; left: 356px; width: 1010px;"><div class="dcg-graph-outer" unselectable="on" style="position: absolute; overflow: hidden; -webkit-user-select: none; width: 1026px; height: 698px;"><canvas class="dcg-graph-inner" unselectable="on" style="position: relative; display: block; -webkit-user-select: none; width: 1026px; height: 698px;" width="1026" height="698"></canvas></div><div class="dcg-graph-outer" unselectable="on" style="position: absolute; overflow: hidden; -webkit-user-select: none; width: 1010px; height: 621px;"><canvas class="dcg-graph-inner" unselectable="on" style="position: relative; display: block; -webkit-user-select: none; width: 1010px; height: 621px;" width="1010" height="621"></canvas></div><div class="dcg-graph-outer dcg-poi-dots-layer" unselectable="on" style="position: absolute; overflow: hidden; -webkit-user-select: none; width: 1010px; height: 621px;"><canvas class="dcg-graph-inner" unselectable="on" style="position: relative; display: block; -webkit-user-select: none; width: 1010px; height: 621px;" width="1010" height="621"></canvas></div><div class="dcg-graph-outer" unselectable="on" style="position: absolute; overflow: hidden; -webkit-user-select: none; width: 1010px; height: 621px;"><canvas class="dcg-graph-inner" unselectable="on" style="position: relative; display: block; -webkit-user-select: none; width: 1010px; height: 621px;" width="1010" height="621"></canvas></div><div class="dcg-graph-outer" unselectable="on" style="position: absolute; overflow: hidden; -webkit-user-select: none; z-index: 0; width: 1010px; height: 621px;"><div unselectable="on" style="position: relative; display: block; -webkit-user-select: none; width: 1010px; height: 621px;"></div></div><div class="dcg-graph-outer dcg-poi-labels-layer" unselectable="on" style="position: absolute; overflow: hidden; -webkit-user-select: none; z-index: 0; width: 1010px; height: 621px;"><div unselectable="on" style="position: relative; display: block; -webkit-user-select: none; width: 1010px; height: 621px;"></div></div><div class="dcg-graph-outer dcg-trace-layer" unselectable="on" style="position: absolute; overflow: hidden; -webkit-user-select: none; z-index: 0; width: 1010px; height: 621px;"><div unselectable="on" style="position: relative; display: block; -webkit-user-select: none; width: 1010px; height: 621px;" class=""></div></div></div><div class="dcg-toast-container" style="display: none;">
+  <span class="dcg-toast dcg-show-undo">
+    <i class="dcg-icon-error"></i>
+    <i class="dcg-icon-remove dcg-action-hide"></i>
+    <span class="dcg-msg dcg-variable-msg">Graph cleared.</span>
+    <a class="dcg-undo dcg-action-toast-undo">Undo</a>
+    <a class="dcg-learn-more-link" target="_blank" style="display: none;">Learn more</a>
+  </span>
+</div><div class="dcg-keypad dcg-layout-mainNumbers">
+  <div class="dcg-keys-container dcg-retracted">
+    <div class="dcg-keys-background dcg-do-not-blur">
+      <div class="dcg-keys">
+
+        <div class="dcg-functions-popover dcg-popover dcg-top">
+          <div class="dcg-popover-interior">
+            <div class="dcg-popover-header">
+              <table><tbody><tr>
+              
+                <td>
+                  <span key="trigTab" class="dcg-heading dcg-tappable dcg-btn dcg-btn-gray dcg-selected">
+                    trig
+                  </span>
+                </td>
+              
+                <td>
+                  <span key="statsTab" class="dcg-heading dcg-tappable dcg-btn dcg-btn-gray">
+                    stats
+                  </span>
+                </td>
+              
+                <td>
+                  <span key="miscTab" class="dcg-heading dcg-tappable dcg-btn dcg-btn-gray">
+                    misc
+                  </span>
+                </td>
+              
+              </tr></tbody></table>
+            </div>
+
+            
+              <table class="dcg-interior-buttons" section="trig" style="display: table;">
+                
+                  <tbody><tr class="dcg-section-headings">
+                    <td>trig</td>
+                    <td>inverse</td>
+                    <td>hyperb</td>
+                  </tr>
+                
+                <tr>
+
+                
+                  </tr><tr>
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-sin-key" key="sin">
+                      <var class="mq-operator-name">s</var><var class="mq-operator-name">i</var><var class="mq-operator-name">n</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-arcsin-key" key="arcsin">
+                      <var class="mq-operator-name">a</var><var class="mq-operator-name">r</var><var class="mq-operator-name">c</var><var class="mq-operator-name">s</var><var class="mq-operator-name">i</var><var class="mq-operator-name">n</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-sinh-key" key="sinh">
+                      <var class="mq-operator-name">s</var><var class="mq-operator-name">i</var><var class="mq-operator-name">n</var><var class="mq-operator-name">h</var>
+                    </span>
+                  </td>
+              
+                  </tr><tr>
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-cos-key" key="cos">
+                      <var class="mq-operator-name">c</var><var class="mq-operator-name">o</var><var class="mq-operator-name">s</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-arccos-key" key="arccos">
+                      <var class="mq-operator-name">a</var><var class="mq-operator-name">r</var><var class="mq-operator-name">c</var><var class="mq-operator-name">c</var><var class="mq-operator-name">o</var><var class="mq-operator-name">s</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-cosh-key" key="cosh">
+                      <var class="mq-operator-name">c</var><var class="mq-operator-name">o</var><var class="mq-operator-name">s</var><var class="mq-operator-name">h</var>
+                    </span>
+                  </td>
+              
+                  </tr><tr>
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-tan-key" key="tan">
+                      <var class="mq-operator-name">t</var><var class="mq-operator-name">a</var><var class="mq-operator-name">n</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-arctan-key" key="arctan">
+                      <var class="mq-operator-name">a</var><var class="mq-operator-name">r</var><var class="mq-operator-name">c</var><var class="mq-operator-name">t</var><var class="mq-operator-name">a</var><var class="mq-operator-name">n</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-tanh-key" key="tanh">
+                      <var class="mq-operator-name">t</var><var class="mq-operator-name">a</var><var class="mq-operator-name">n</var><var class="mq-operator-name">h</var>
+                    </span>
+                  </td>
+              
+                  </tr><tr>
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-csc-key" key="csc">
+                      <var class="mq-operator-name">c</var><var class="mq-operator-name">s</var><var class="mq-operator-name">c</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-arccsc-key" key="arccsc">
+                      <var class="mq-operator-name">a</var><var class="mq-operator-name">r</var><var class="mq-operator-name">c</var><var class="mq-operator-name">c</var><var class="mq-operator-name">s</var><var class="mq-operator-name">c</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-csch-key" key="csch">
+                      <var class="mq-operator-name">c</var><var class="mq-operator-name">s</var><var class="mq-operator-name">c</var><var class="mq-operator-name">h</var>
+                    </span>
+                  </td>
+              
+                  </tr><tr>
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-sec-key" key="sec">
+                      <var class="mq-operator-name">s</var><var class="mq-operator-name">e</var><var class="mq-operator-name">c</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-arcsec-key" key="arcsec">
+                      <var class="mq-operator-name">a</var><var class="mq-operator-name">r</var><var class="mq-operator-name">c</var><var class="mq-operator-name">s</var><var class="mq-operator-name">e</var><var class="mq-operator-name">c</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-sech-key" key="sech">
+                      <var class="mq-operator-name">s</var><var class="mq-operator-name">e</var><var class="mq-operator-name">c</var><var class="mq-operator-name">h</var>
+                    </span>
+                  </td>
+              
+                  </tr><tr>
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-cot-key" key="cot">
+                      <var class="mq-operator-name">c</var><var class="mq-operator-name">o</var><var class="mq-operator-name">t</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-arccot-key" key="arccot">
+                      <var class="mq-operator-name">a</var><var class="mq-operator-name">r</var><var class="mq-operator-name">c</var><var class="mq-operator-name">c</var><var class="mq-operator-name">o</var><var class="mq-operator-name">t</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-coth-key" key="coth">
+                      <var class="mq-operator-name">c</var><var class="mq-operator-name">o</var><var class="mq-operator-name">t</var><var class="mq-operator-name">h</var>
+                    </span>
+                  </td>
+              
+              </tr></tbody></table>
+            
+              <table class="dcg-interior-buttons" section="stats" style="display: none;">
+                
+                <tbody><tr>
+
+                
+                  </tr><tr>
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-total-key" key="total">
+                      <var class="mq-operator-name">t</var><var class="mq-operator-name">o</var><var class="mq-operator-name">t</var><var class="mq-operator-name">a</var><var class="mq-operator-name">l</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-length-key" key="length">
+                      <var class="mq-operator-name">l</var><var class="mq-operator-name">e</var><var class="mq-operator-name">n</var><var class="mq-operator-name">g</var><var class="mq-operator-name">t</var><var class="mq-operator-name">h</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-mean-key" key="mean">
+                      <var class="mq-operator-name">m</var><var class="mq-operator-name">e</var><var class="mq-operator-name">a</var><var class="mq-operator-name">n</var>
+                    </span>
+                  </td>
+              
+                  </tr><tr>
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-median-key" key="median">
+                      <var class="mq-operator-name">m</var><var class="mq-operator-name">e</var><var class="mq-operator-name">d</var><var class="mq-operator-name">i</var><var class="mq-operator-name">a</var><var class="mq-operator-name">n</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-min-key" key="min">
+                      <var class="mq-operator-name">m</var><var class="mq-operator-name">i</var><var class="mq-operator-name">n</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-max-key" key="max">
+                      <var class="mq-operator-name">m</var><var class="mq-operator-name">a</var><var class="mq-operator-name">x</var>
+                    </span>
+                  </td>
+              
+                  </tr><tr>
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-quantile-key" key="quantile">
+                      <var class="mq-operator-name">q</var><var class="mq-operator-name">u</var><var class="mq-operator-name">a</var><var class="mq-operator-name">n</var><var class="mq-operator-name">t</var><var class="mq-operator-name">i</var><var class="mq-operator-name">l</var><var class="mq-operator-name">e</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-stdev-key" key="stdev">
+                      <var class="mq-operator-name">s</var><var class="mq-operator-name">t</var><var class="mq-operator-name">d</var><var class="mq-operator-name">e</var><var class="mq-operator-name">v</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-stdevp-key" key="stdevp">
+                      <var class="mq-operator-name">s</var><var class="mq-operator-name">t</var><var class="mq-operator-name">d</var><var class="mq-operator-name">e</var><var class="mq-operator-name">v</var><var class="mq-operator-name">p</var>
+                    </span>
+                  </td>
+              
+                  </tr><tr>
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-var-key" key="var">
+                      <var class="mq-operator-name">v</var><var class="mq-operator-name">a</var><var class="mq-operator-name">r</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-cov-key" key="cov">
+                      <var class="mq-operator-name">c</var><var class="mq-operator-name">o</var><var class="mq-operator-name">v</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-corr-key" key="corr">
+                      <var class="mq-operator-name">c</var><var class="mq-operator-name">o</var><var class="mq-operator-name">r</var><var class="mq-operator-name">r</var>
+                    </span>
+                  </td>
+              
+                  </tr><tr>
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-mad-key" key="mad">
+                      <var class="mq-operator-name">m</var><var class="mq-operator-name">a</var><var class="mq-operator-name">d</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-nCr-key" key="nCr">
+                      <var class="mq-operator-name">n</var><var class="mq-operator-name">C</var><var class="mq-operator-name">r</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-nPr-key" key="nPr">
+                      <var class="mq-operator-name">n</var><var class="mq-operator-name">P</var><var class="mq-operator-name">r</var>
+                    </span>
+                  </td>
+              
+                  </tr><tr>
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-fact-key" key="fact">
+                      <var>n</var><span>!</span>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-twiddle-key" key="twiddle">
+                      <span>~</span>
+                    </span>
+                  </td>
+              
+              </tr></tbody></table>
+            
+              <table class="dcg-interior-buttons" section="misc" style="display: none;">
+                
+                <tbody><tr>
+
+                
+                  </tr><tr>
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-lcm-key" key="lcm">
+                      <var class="mq-operator-name">l</var><var class="mq-operator-name">c</var><var class="mq-operator-name">m</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-gcd-key" key="gcd">
+                      <var class="mq-operator-name">g</var><var class="mq-operator-name">c</var><var class="mq-operator-name">d</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-mod-key" key="mod">
+                      <var class="mq-operator-name">m</var><var class="mq-operator-name">o</var><var class="mq-operator-name">d</var>
+                    </span>
+                  </td>
+              
+                  </tr><tr>
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-ceil-key" key="ceil">
+                      <var class="mq-operator-name">c</var><var class="mq-operator-name">e</var><var class="mq-operator-name">i</var><var class="mq-operator-name">l</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-floor-key" key="floor">
+                      <var class="mq-operator-name">f</var><var class="mq-operator-name">l</var><var class="mq-operator-name">o</var><var class="mq-operator-name">o</var><var class="mq-operator-name">r</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-round-key" key="round">
+                      <var class="mq-operator-name">r</var><var class="mq-operator-name">o</var><var class="mq-operator-name">u</var><var class="mq-operator-name">n</var><var class="mq-operator-name">d</var>
+                    </span>
+                  </td>
+              
+                  </tr><tr>
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-abs-key" key="abs">
+                      <var class="mq-operator-name">a</var><var class="mq-operator-name">b</var><var class="mq-operator-name">s</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-sign-key" key="sign">
+                      <var class="mq-operator-name">s</var><var class="mq-operator-name">i</var><var class="mq-operator-name">g</var><var class="mq-operator-name">n</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-cuberoot-key" key="cuberoot">
+                      <span>3</span><span>√</span>
+                    </span>
+                  </td>
+              
+                  </tr><tr>
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-exp-key" key="exp">
+                      <var class="mq-operator-name">e</var><var class="mq-operator-name">x</var><var class="mq-operator-name">p</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-ln-key" key="ln">
+                      <var class="mq-operator-name">l</var><var class="mq-operator-name">n</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-log-key" key="log">
+                      <var class="mq-operator-name">l</var><var class="mq-operator-name">o</var><var class="mq-operator-name">g</var>
+                    </span>
+                  </td>
+              
+                  </tr><tr>
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-loga-key" key="loga">
+                      <var class="mq-operator-name">l</var><var class="mq-operator-name">o</var><var class="mq-operator-name">g</var><span class="mq-supsub mq-non-leaf"><span class="mq-sub"><var>a</var></span><span style="display:inline-block;width:0">​</span></span>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-ddx-key" key="ddx">
+                      <var>d</var><span>/</span><var>d</var><var>x</var>
+                    </span>
+                  </td>
+              
+                  
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-sum-key" key="sum">
+                      <span class="mq-large-operator mq-non-leaf"><span class="mq-to"><span class="mq-empty"></span></span><big>∑</big><span class="mq-from"><span class="mq-empty"></span></span></span>
+                    </span>
+                  </td>
+              
+                  </tr><tr>
+                  
+                  <td>
+                    <span class="dcg-option dcg-btn dcg-tappable dcg-key dcg-tappable mq-math-mode dcg-prod-key" key="prod">
+                      <span class="mq-large-operator mq-non-leaf"><span class="mq-to"><span class="mq-empty"></span></span><big>∏</big><span class="mq-from"><span class="mq-empty"></span></span></span>
+                    </span>
+                  </td>
+              
+              </tr></tbody></table>
+            
+          </div>
+          <div class="dcg-arrow"></div>
+        </div>
+
+        
+         <div class="dcg-mainNumbersLeft dcg-main-keypad-section">
+           
+             <div class="dcg-row">
+               <div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-highlighted dcg-key dcg-tappable mq-math-mode dcg-highlightedX-key" key="highlightedX">
+                       <var>x</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-highlighted dcg-key dcg-tappable mq-math-mode dcg-highlightedY-key" key="highlightedY">
+                       <var>y</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-exponent dcg-key dcg-tappable mq-math-mode dcg-squared-key" key="squared">
+                       <var>a</var><span class="mq-supsub mq-non-leaf mq-sup-only"><span class="mq-sup"><span>2</span></span></span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-exponent dcg-key dcg-tappable mq-math-mode dcg-exponent-key" key="exponent">
+                       <var>a</var><span class="mq-supsub mq-non-leaf mq-sup-only"><span class="mq-sup"><var>b</var></span></span>
+                     </a>
+                   
+                 </div>
+               <div style="clear:both"></div>
+             </div>
+           
+             <div class="dcg-row">
+               <div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-leftparen-key" key="leftparen">
+                       <span>(</span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-rightparen-key" key="rightparen">
+                       <span>)</span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-lt-key" key="lt">
+                       <span class="mq-binary-operator">&lt;</span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-gt-key" key="gt">
+                       <span class="mq-binary-operator">&gt;</span>
+                     </a>
+                   
+                 </div>
+               <div style="clear:both"></div>
+             </div>
+           
+             <div class="dcg-row">
+               <div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-pipes-key" key="pipes">
+                       <span>|</span><var>a</var><span>|</span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-comma-key" key="comma">
+                       <span>,</span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-le-key" key="le">
+                       <span class="mq-binary-operator">≤</span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-ge-key" key="ge">
+                       <span class="mq-binary-operator">≥</span>
+                     </a>
+                   
+                 </div>
+               <div style="clear:both"></div>
+             </div>
+           
+             <div class="dcg-row">
+               <div class="dcg-cell dcg-twowide">
+                   
+                     <a class="dcg-btn dcg-btn-gray dcg-key dcg-tappable dcg-toggleLetters-key" key="toggleLetters">
+                       A B C
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-sqrt-key" key="sqrt">
+                       <span>√</span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-pi-key" key="pi">
+                       <span class="mq-nonSymbola">π</span>
+                     </a>
+                   
+                 </div>
+               <div style="clear:both"></div>
+             </div>
+           
+         </div>
+        
+         <div class="dcg-numbersMiddle dcg-main-keypad-section">
+           
+             <div class="dcg-row">
+               <div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-7-key" key="7">
+                       <span>7</span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-8-key" key="8">
+                       <span>8</span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-9-key" key="9">
+                       <span>9</span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-divide-key" key="divide">
+                       <span class="mq-binary-operator">÷</span>
+                     </a>
+                   
+                 </div>
+               <div style="clear:both"></div>
+             </div>
+           
+             <div class="dcg-row">
+               <div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-4-key" key="4">
+                       <span>4</span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-5-key" key="5">
+                       <span>5</span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-6-key" key="6">
+                       <span>6</span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-times-key" key="times">
+                       <span>×</span>
+                     </a>
+                   
+                 </div>
+               <div style="clear:both"></div>
+             </div>
+           
+             <div class="dcg-row">
+               <div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-1-key" key="1">
+                       <span>1</span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-2-key" key="2">
+                       <span>2</span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-3-key" key="3">
+                       <span>3</span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-minus-key" key="minus">
+                       <span>−</span>
+                     </a>
+                   
+                 </div>
+               <div style="clear:both"></div>
+             </div>
+           
+             <div class="dcg-row">
+               <div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-0-key" key="0">
+                       <span>0</span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-decimal-key" key="decimal">
+                       <span>.</span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-equals-key" key="equals">
+                       <span class="mq-binary-operator">=</span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-plus-key" key="plus">
+                       <span>+</span>
+                     </a>
+                   
+                 </div>
+               <div style="clear:both"></div>
+             </div>
+           
+         </div>
+        
+         <div class="dcg-numbersRight dcg-main-keypad-section">
+           
+             <div class="dcg-row">
+               <div class="dcg-cell dcg-twowide">
+                   
+                     <a class="dcg-btn dcg-btn-gray dcg-key dcg-tappable dcg-popupFunctions-key" key="popupFunctions">
+                       func<span class="dcg-hide-on-narrow">tion</span>s
+                     </a>
+                   
+                 </div>
+               <div style="clear:both"></div>
+             </div>
+           
+             <div class="dcg-row">
+               <div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable dcg-left-key" key="left">
+                       <i class="dcg-icon-arrow-left"></i>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable dcg-right-key" key="right">
+                       <i class="dcg-icon-arrow-right"></i>
+                     </a>
+                   
+                 </div>
+               <div style="clear:both"></div>
+             </div>
+           
+             <div class="dcg-row">
+               <div class="dcg-cell dcg-halfwide">
+                   
+                 </div><div class="dcg-cell dcg-onepointfivewide">
+                   
+                     <a class="dcg-btn dcg-btn-gray dcg-key dcg-tappable dcg-backspace-key" key="backspace">
+                       <i class="dcg-icon-delete"></i>
+                     </a>
+                   
+                 </div>
+               <div style="clear:both"></div>
+             </div>
+           
+             <div class="dcg-row">
+               <div class="dcg-cell dcg-twowide">
+                   
+                     <a class="dcg-btn dcg-btn-gray dcg-key dcg-tappable dcg-enter-key" key="enter">
+                       <i class="dcg-icon-arrow-enter"></i>
+                     </a>
+                   
+                 </div>
+               <div style="clear:both"></div>
+             </div>
+           
+         </div>
+        
+         <div class="dcg-letters dcg-main-keypad-section">
+           
+             <div class="dcg-row">
+               <div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-q-key" key="q">
+                       <var>q</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-w-key" key="w">
+                       <var>w</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-e-key" key="e">
+                       <var>e</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-r-key" key="r">
+                       <var>r</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-t-key" key="t">
+                       <var>t</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-y-key" key="y">
+                       <var>y</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-u-key" key="u">
+                       <var>u</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-i-key" key="i">
+                       <var>i</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-o-key" key="o">
+                       <var>o</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-p-key" key="p">
+                       <var>p</var>
+                     </a>
+                   
+                 </div>
+               <div style="clear:both"></div>
+             </div>
+           
+             <div class="dcg-row">
+               <div class="dcg-cell dcg-halfwide">
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-a-key" key="a">
+                       <var>a</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-s-key" key="s">
+                       <var>s</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-d-key" key="d">
+                       <var>d</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-f-key" key="f">
+                       <var class="mq-f">f</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-g-key" key="g">
+                       <var>g</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-h-key" key="h">
+                       <var>h</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-j-key" key="j">
+                       <var>j</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-k-key" key="k">
+                       <var>k</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-l-key" key="l">
+                       <var>l</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell dcg-halfwide">
+                   
+                 </div>
+               <div style="clear:both"></div>
+             </div>
+           
+             <div class="dcg-row">
+               <div class="dcg-cell dcg-onepointfivewide">
+                   
+                     <a class="dcg-btn dcg-btn-gray dcg-key dcg-tappable dcg-toggleCapital-key" key="toggleCapital">
+                       <i class="dcg-icon-shift"></i>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-z-key" key="z">
+                       <var>z</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-x-key" key="x">
+                       <var>x</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-c-key" key="c">
+                       <var>c</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-v-key" key="v">
+                       <var>v</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-b-key" key="b">
+                       <var>b</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-n-key" key="n">
+                       <var>n</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-m-key" key="m">
+                       <var>m</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell dcg-onepointfivewide">
+                   
+                     <a class="dcg-btn dcg-btn-gray dcg-key dcg-tappable dcg-backspace-key" key="backspace">
+                       <i class="dcg-icon-delete"></i>
+                     </a>
+                   
+                 </div>
+               <div style="clear:both"></div>
+             </div>
+           
+             <div class="dcg-row">
+               <div class="dcg-cell dcg-twowide">
+                   
+                     <a class="dcg-btn dcg-btn-gray dcg-key dcg-tappable dcg-toggleNumbers-key" key="toggleNumbers">
+                       1 2 3
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-subscript-key" key="subscript">
+                       <var>a</var><span class="mq-supsub mq-non-leaf"><span class="mq-sub"><var>b</var></span><span style="display:inline-block;width:0">​</span></span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-plus-key" key="plus">
+                       <span>+</span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable dcg-openbracket-key" key="openbracket">
+                       { <span class="dcg-ghost-bracket">}</span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable dcg-opensquare-key" key="opensquare">
+                       [ <span class="dcg-ghost-bracket">]</span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-twiddle-key" key="twiddle">
+                       <span>~</span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-theta-key" key="theta">
+                       <span>θ</span>
+                     </a>
+                   
+                 </div><div class="dcg-cell dcg-twowide">
+                   
+                     <a class="dcg-btn dcg-btn-gray dcg-key dcg-tappable dcg-enter-key" key="enter">
+                       <i class="dcg-icon-arrow-enter"></i>
+                     </a>
+                   
+                 </div>
+               <div style="clear:both"></div>
+             </div>
+           
+         </div>
+        
+         <div class="dcg-capitalLetters dcg-main-keypad-section">
+           
+             <div class="dcg-row">
+               <div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-Q-key" key="Q">
+                       <var>Q</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-W-key" key="W">
+                       <var>W</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-E-key" key="E">
+                       <var>E</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-R-key" key="R">
+                       <var>R</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-T-key" key="T">
+                       <var>T</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-Y-key" key="Y">
+                       <var>Y</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-U-key" key="U">
+                       <var>U</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-I-key" key="I">
+                       <var>I</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-O-key" key="O">
+                       <var>O</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-P-key" key="P">
+                       <var>P</var>
+                     </a>
+                   
+                 </div>
+               <div style="clear:both"></div>
+             </div>
+           
+             <div class="dcg-row">
+               <div class="dcg-cell dcg-halfwide">
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-A-key" key="A">
+                       <var>A</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-S-key" key="S">
+                       <var>S</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-D-key" key="D">
+                       <var>D</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-F-key" key="F">
+                       <var>F</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-G-key" key="G">
+                       <var>G</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-H-key" key="H">
+                       <var>H</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-J-key" key="J">
+                       <var>J</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-K-key" key="K">
+                       <var>K</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-L-key" key="L">
+                       <var>L</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell dcg-halfwide">
+                   
+                 </div>
+               <div style="clear:both"></div>
+             </div>
+           
+             <div class="dcg-row">
+               <div class="dcg-cell dcg-onepointfivewide">
+                   
+                     <a class="dcg-btn dcg-btn-gray dcg-active dcg-key dcg-tappable dcg-toggleLowercase-key" key="toggleLowercase">
+                       <i class="dcg-icon-shift"></i>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-Z-key" key="Z">
+                       <var>Z</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-X-key" key="X">
+                       <var>X</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-C-key" key="C">
+                       <var>C</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-V-key" key="V">
+                       <var>V</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-B-key" key="B">
+                       <var>B</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-N-key" key="N">
+                       <var>N</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-M-key" key="M">
+                       <var>M</var>
+                     </a>
+                   
+                 </div><div class="dcg-cell dcg-onepointfivewide">
+                   
+                     <a class="dcg-btn dcg-btn-gray dcg-key dcg-tappable dcg-backspace-key" key="backspace">
+                       <i class="dcg-icon-delete"></i>
+                     </a>
+                   
+                 </div>
+               <div style="clear:both"></div>
+             </div>
+           
+             <div class="dcg-row">
+               <div class="dcg-cell dcg-twowide">
+                   
+                     <a class="dcg-btn dcg-btn-gray dcg-key dcg-tappable dcg-toggleNumbers-key" key="toggleNumbers">
+                       1 2 3
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-subscript-key" key="subscript">
+                       <var>a</var><span class="mq-supsub mq-non-leaf"><span class="mq-sub"><var>b</var></span><span style="display:inline-block;width:0">​</span></span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-exponent dcg-key dcg-tappable mq-math-mode dcg-exponent-key" key="exponent">
+                       <var>a</var><span class="mq-supsub mq-non-leaf mq-sup-only"><span class="mq-sup"><var>b</var></span></span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable dcg-closebracket-key" key="closebracket">
+                       <span class="dcg-ghost-bracket">{</span> }
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable dcg-closesquare-key" key="closesquare">
+                       <span class="dcg-ghost-bracket">[</span> ]
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-colon-key" key="colon">
+                       <span>:</span>
+                     </a>
+                   
+                 </div><div class="dcg-cell ">
+                   
+                     <a class="dcg-btn dcg-key dcg-tappable mq-math-mode dcg-tau-key" key="tau">
+                       <span>τ</span>
+                     </a>
+                   
+                 </div><div class="dcg-cell dcg-twowide">
+                   
+                     <a class="dcg-btn dcg-btn-gray dcg-key dcg-tappable dcg-enter-key" key="enter">
+                       <i class="dcg-icon-arrow-enter"></i>
+                     </a>
+                   
+                 </div>
+               <div style="clear:both"></div>
+             </div>
+           
+         </div>
+        
+        <div style="clear:both"></div>
+      </div>
+
+      <div class="dcg-minimize-keypad dcg-tooltip" tooltip="Hide Keypad">
+        <i class="dcg-icon-keyboard"></i>
+        <i class="dcg-icon-caret-down"></i>
+      </div>
+
+      <div class="dcg-minimize-keypad dcg-tooltip dcg-inline-minimize-keypad" tooltip="Hide Keypad">
+        <i class="dcg-icon-remove"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="dcg-show-keypad dcg-do-not-blur dcg-tooltip" tooltip="Show Keypad" style="display: block;" original-title="">
+    <i class="dcg-icon-keyboard"></i>
+    <i class="dcg-icon-caret-up dcg-do-not-blur"></i>
+  </div>
+</div><div class="dcg-pillbox-container">
+
+  <div class="dcg-settings-pillbox dcg-tooltip-e dcg-action-settings" tooltip="Graph Settings" original-title="">
+    <i class="dcg-icon-wrench"></i>
+  </div>
+
+  <div class="dcg-zoom-container">
+    <div class="dcg-zoominout-pillbox">
+      <div class="dcg-action-zoomin dcg-tooltip-e" tooltip="Zoom In" original-title="">
+        <i class="dcg-icon dcg-icon-plus"></i>
+      </div>
+      <div class="dcg-option dcg-action-zoomout dcg-tooltip-e" tooltip="Zoom Out" original-title="">
+        <i class="dcg-icon dcg-icon-minus"></i>
+      </div>
+    </div>
+    <div class="dcg-option dcg-action-zoomrestore dcg-tooltip-e dcg-disabled" tooltip="Default Zoom">
+      <i class="dcg-icon dcg-icon-home"></i>
+    </div>
+  </div>
+
+  <div class="dcg-graphpaper-branding">
+    <div class="dcg-powered-by">powered by</div>
+    <i class="dcg-icon-desmos"></i>
+  </div>
+<div></div><div class="dcg-settings-container dcg-left dcg-popover dcg-constrained-height-popover" style="display: none; bottom: 0px;">
+    <div class="dcg-popover-interior">
+      <div class="dcg-popover-fixedwidth">
+        <div class="dcg-popover-content">
+          <div class="dcg-modern-btn dcg-action-projectormode">Projector Mode</div>
+        </div>
+
+        <div class="dcg-popover-content dcg-graph-settings">
+
+          <div class="dcg-section-title">
+            Graph Paper
+          </div>
+
+          <div class="dcg-grid-settings">
+            <div class="dcg-polargroup">
+              <div class="dcg-icon dcg-action-cartesian dcg-active"></div>
+              <div class="dcg-icon dcg-action-polar"></div>
+              <div class="dcg-title">Grid</div>
+            </div>
+
+            <span class="dcg-checkbox dcg-action-zoomsquare dcg-disabled dcg-checked">
+              <span class="dcg-checkbox-box"><i class="dcg-icon-check"></i></span>
+              <span class="dcg-checkbox-label">Square Grid</span>
+            </span>
+            <div style="clear:both"></div>
+          </div>
+
+          <div class="dcg-collapsable-options dcg-x-axis-options dcg-collapsed">
+            <div class="dcg-icon dcg-x-arrows dcg-display-icon dcg-active" dcg-arrows="NONE"><i class="dcg-icon-hidden"></i></div>
+
+            <div class="dcg-title-container">
+              <div class="dcg-caret-container"><i class="dcg-icon-caret-down"></i></div>
+              <div class="dcg-title">X-Axis</div>
+            </div>
+            <input class="dcg-axis-label dcg-x-axis-label" placeholder="add label">
+
+            <div class="dcg-readonly-inputs">
+              <div class="dcg-readonly-mathquill-container">
+                <span class="dcg-action-editinput mq-math-mode" data-dcg-limit="xmin"><span class="mq-selectable">$$</span><span class="mq-root-block" mathquill-block-id="729"><span mathquill-command-id="1118" class="">−</span><span mathquill-command-id="1120">1</span><span mathquill-command-id="1122">0</span></span></span><span class="dcg-interval-interior mq-math-mode"><span class="mq-binary-operator">≤</span><var>x</var><span class="mq-binary-operator">≤</span></span><span class="dcg-action-editinput mq-math-mode" data-dcg-limit="xmax"><span class="mq-selectable">$$</span><span class="mq-root-block" mathquill-block-id="731"><span mathquill-command-id="1124">1</span><span mathquill-command-id="1126">0</span></span></span>
+              </div>
+              <div class="dcg-readonly-mathquill-container dcg-step-container" style="display: block;">
+                <span class="dcg-step-label">Step:</span>
+                <span class="dcg-action-editinput mq-math-mode" data-dcg-limit="xstep"><span class="mq-selectable">$$</span><span class="mq-root-block" mathquill-block-id="733"><span mathquill-command-id="821">2</span></span></span>
+              </div>
+              <div style="clear:both"></div>
+
+            </div>
+
+            <div class="dcg-editable-inputs">
+              <div class="dcg-editable-mathquill-container">
+                <span class="dcg-math-field mq-editable-field mq-math-mode dcg-math-input" data-dcg-limit="xmin"><span class="mq-textarea"><textarea readonly=""></textarea></span><span class="mq-root-block" mathquill-block-id="769"><span mathquill-command-id="1088" class="">−</span><span mathquill-command-id="1090">1</span><span mathquill-command-id="1092">0</span></span></span>
+                <span class="dcg-interval-interior mq-math-mode"><span class="mq-binary-operator">≤</span><var>x</var><span class="mq-binary-operator">≤</span></span>
+                <span class="dcg-math-field mq-editable-field mq-math-mode dcg-math-input" data-dcg-limit="xmax"><span class="mq-textarea"><textarea readonly=""></textarea></span><span class="mq-root-block" mathquill-block-id="771"><span mathquill-command-id="1094">1</span><span mathquill-command-id="1096">0</span></span></span>
+                <span class="dcg-step-container" style="display: inline;">
+                  <span class="dcg-step-label">Step:</span>
+                  <span class="dcg-math-field mq-editable-field mq-math-mode dcg-math-input" data-dcg-limit="xstep"><span class="mq-textarea"><textarea readonly=""></textarea></span><span class="mq-root-block mq-empty" mathquill-block-id="773"></span></span>
+                </span>
+              </div>
+            </div>
+
+            <div class="dcg-more-options">
+              <span>
+                <div class="dcg-arrows-label">Arrows:</div>
+                <div class="dcg-icon dcg-x-arrows dcg-active" dcg-arrows="NONE"></div>
+                <div class="dcg-icon dcg-x-arrows" dcg-arrows="POSITIVE"></div>
+                <div class="dcg-icon dcg-x-arrows" dcg-arrows="BOTH"></div>
+              </span>
+              <span class="dcg-checkbox dcg-action-xaxisnumbers dcg-checked">
+                <span class="dcg-checkbox-box"><i class="dcg-icon-check"></i></span>
+                <span class="dcg-checkbox-label">Show Numbers</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="dcg-collapsable-options dcg-y-axis-options dcg-collapsed">
+            <div class="dcg-icon dcg-y-arrows dcg-display-icon dcg-active" dcg-arrows="NONE"><i class="dcg-icon-hidden"></i></div>
+
+            <div class="dcg-title-container">
+              <div class="dcg-caret-container"><i class="dcg-icon-caret-down"></i></div>
+              <div class="dcg-title">Y-Axis</div>
+            </div>
+            <input class="dcg-axis-label dcg-y-axis-label" placeholder="add label">
+
+            <div class="dcg-readonly-inputs">
+              <div class="dcg-readonly-mathquill-container">
+                <span class="dcg-action-editinput mq-math-mode" data-dcg-limit="ymin"><span class="mq-selectable">$$</span><span class="mq-root-block" mathquill-block-id="735"><span mathquill-command-id="1218" class="">−</span><span mathquill-command-id="1220">6</span><span mathquill-command-id="1222">.</span><span mathquill-command-id="1224">1</span><span mathquill-command-id="1226">5</span></span></span><span class="dcg-interval-interior mq-math-mode"><span class="mq-binary-operator">≤</span><var>y</var><span class="mq-binary-operator">≤</span></span><span class="dcg-action-editinput mq-math-mode" data-dcg-limit="ymax"><span class="mq-selectable">$$</span><span class="mq-root-block" mathquill-block-id="737"><span mathquill-command-id="1228">6</span><span mathquill-command-id="1230">.</span><span mathquill-command-id="1232">1</span><span mathquill-command-id="1234">4</span><span mathquill-command-id="1236">5</span></span></span>
+              </div>
+              <div class="dcg-readonly-mathquill-container dcg-step-container" style="display: block;">
+                <span class="dcg-step-label">Step:</span>
+                <span class="dcg-action-editinput mq-math-mode" data-dcg-limit="ystep"><span class="mq-selectable">$$</span><span class="mq-root-block" mathquill-block-id="739"><span mathquill-command-id="823">2</span></span></span>
+              </div>
+              <div style="clear:both"></div>
+            </div>
+
+            <div class="dcg-editable-inputs">
+              <div class="dcg-editable-mathquill-container">
+                <span class="dcg-math-field mq-editable-field mq-math-mode dcg-math-input" data-dcg-limit="ymin"><span class="mq-textarea"><textarea readonly=""></textarea></span><span class="mq-root-block" mathquill-block-id="775"><span mathquill-command-id="1198" class="">−</span><span mathquill-command-id="1200">6</span><span mathquill-command-id="1202">.</span><span mathquill-command-id="1204">1</span><span mathquill-command-id="1206">5</span></span></span>
+                <span class="dcg-interval-interior mq-math-mode"><span class="mq-binary-operator">≤</span><var>y</var><span class="mq-binary-operator">≤</span></span>
+                <span class="dcg-math-field mq-editable-field mq-math-mode dcg-math-input" data-dcg-limit="ymax"><span class="mq-textarea"><textarea readonly=""></textarea></span><span class="mq-root-block" mathquill-block-id="777"><span mathquill-command-id="1208">6</span><span mathquill-command-id="1210">.</span><span mathquill-command-id="1212">1</span><span mathquill-command-id="1214">4</span><span mathquill-command-id="1216">5</span></span></span>
+                <span class="dcg-step-container" style="display: inline;">
+                  <span class="dcg-step-label">Step:</span>
+                  <span class="dcg-math-field mq-editable-field mq-math-mode dcg-math-input" data-dcg-limit="ystep"><span class="mq-textarea"><textarea readonly=""></textarea></span><span class="mq-root-block mq-empty" mathquill-block-id="779"></span></span>
+                </span>
+              </div>
+            </div>
+
+            <div class="dcg-more-options">
+              <span>
+                <div class="dcg-arrows-label">Arrows:</div>
+                <div class="dcg-icon dcg-y-arrows dcg-active" dcg-arrows="NONE"></div>
+                <div class="dcg-icon dcg-y-arrows" dcg-arrows="POSITIVE"></div>
+                <div class="dcg-icon dcg-y-arrows" dcg-arrows="BOTH"></div>
+              </span>
+              <span class="dcg-checkbox dcg-action-yaxisnumbers dcg-checked">
+                <span class="dcg-checkbox-box"><i class="dcg-icon-check"></i></span>
+                <span class="dcg-checkbox-label">Show Numbers</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="dcg-section-title">
+            Angles
+          </div>
+          <div class="dcg-radiangroup">
+            <div class="dcg-action-degreemode dcg-modern-btn">Degrees</div>
+            <div class="dcg-action-radianmode dcg-modern-btn dcg-active">Radians</div>
+
+            <div class="dcg-polarnumbers-container">
+              <span class="dcg-checkbox dcg-action-polarnumbers dcg-checked" style="display: none;">
+                <span class="dcg-checkbox-box"><i class="dcg-icon-check"></i></span>
+                <span class="dcg-checkbox-label">Show Grid Angles</span>
+              </span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="dcg-arrow"></div>
+    </div>
+</div></div><div class="">
+
+<div class="dcg-show-expressions-tab">
+  <a class="dcg-resize-list-btn dcg-action-showexpressions dcg-tooltip" tooltip="Show List">
+    <i class="dcg-icon-show"></i>
+  </a>
+</div>
+
+
+<div class="dcg-exppanel-outer" style="bottom: 0px;">
+  <div class="dcg-exppanel-container dcg-do-animate" style="max-width: 356px; min-width: 356px;">
+    <div class="dcg-expression-top-bar">
+      <a class="dcg-btn dcg-btn-medium dcg-pull-left dcg-hide-in-edit dcg-add-expression-btn dcg-action-add-expression dcg-tooltip dcg-do-not-blur" handleevent="true" tooltip="Add Item"><i class="dcg-icon-plus"></i><i class="dcg-icon-caret-down"></i></a>
+
+      <a class="dcg-btn dcg-btn-red dcg-btn-medium dcg-pull-left dcg-show-in-edit dcg-action-clearall"> Delete All</a>
+      <span class="dcg-center-aligned dcg-show-in-edit">
+        <a class="dcg-action-undo dcg-tooltip" tooltip="Undo (ctrl+z)"><i class="dcg-icon-undo"></i></a>
+        <a class="dcg-action-redo dcg-tooltip" tooltip="Redo (ctrl+y)"><i class="dcg-icon-redo"></i></a>
+      </span>
+
+      <a class="dcg-resize-list-btn dcg-hide-in-edit dcg-action-hideexpressions dcg-tooltip" tooltip="Hide List" original-title=""><i class="dcg-icon-hide"></i></a>
+
+      <a class="dcg-btn dcg-btn-medium dcg-pull-right dcg-action-toggle-edit dcg-hide-in-edit dcg-tooltip dcg-do-not-blur" handleevent="true" tooltip="Edit List" original-title="">
+        <i class="dcg-icon-settings"></i>
+      </a>
+      <a class="dcg-btn dcg-btn-blue dcg-btn-medium dcg-pull-right dcg-action-toggle-edit dcg-show-in-edit dcg-do-not-blur" handleevent="true">
+          Done
+      </a>
+    </div>
+
+    <div class="dcg-exppanel dcg-disable-horizontal-scroll-to-cursor">
+
+      <div class="dcg-drop-image">
+        <span>Drop Image Here</span>
+      </div>
+
+      <div class="dcg-expressionlist">
+        <span class="dcg-template-expressioneach"><div class="dcg-do-not-blur dcg-expressionitem dcg-mathitem" expr-id="3" index="0">
+  <div class="dcg-fade-container">
+
+    <div class="dcg-fadeout-left"></div>
+
+    <span class="dcg-main">
+      <span class="dcg-math-field dcg-transient-mathquill mq-editable-field mq-math-mode" style="display: none;"><span class="mq-textarea"><textarea readonly=""></textarea></span><span class="mq-root-block mq-empty" mathquill-block-id="1155"></span></span>
+      <span class="dcg-math-field dcg-template-mathquill mq-editable-field mq-math-mode"><span class="mq-textarea"><textarea readonly=""></textarea></span><span class="mq-root-block mq-empty" mathquill-block-id="1153"></span></span>
+    </span>
+
+    <span class="dcg-fadeout"></span>
+    <i class="dcg-icon-remove dcg-top-level-delete dcg-action-delete" handleevent="true"></i>
+
+    <div class="dcg-slider-speed-container dcg-do-not-blur" handleevent="true">
+      <span class="dcg-action-slower">«</span>
+      <span class="dcg-variable-speed"></span>
+      <span class="dcg-action-faster">»</span>
+    </div>
+
+    <div class="dcg-template-bottom-container dcg-fixed-width-element" style="width: 356px;">
+      <div class="dcg-template-bottom"></div>
+    </div>
+  </div>
+
+  <span class="dcg-tab dcg-action-drag dcg-action-icon-touch" handleevent="true" tapboundary="true" disablescroll="true">
+    <span class="dcg-num dcg-variable-index">1</span>
+    <span class="dcg-tab-interior dcg-action-icon-mouse">
+      <span class="dcg-icon dcg-graph-icon dcg-variable-colorcss dcg-variable-errortooltip tipsy-sticky dcg-ungraphable" tooltip="" style="border-color: rgb(79, 129, 189); background: rgb(79, 129, 189);">
+	<i class="dcg-icon-play"></i>
+	<i class="dcg-icon-pause"></i>
+	<i class="dcg-icon-hidden"></i>
+</span>
+    </span>
+  </span>
+
+
+  <span class="dcg-exp-actions">
+    <span class="dcg-graphic" handleevent="true"></span>
+    <nobr>
+      <span class="dcg-action-delete dcg-delete-btn dcg-tooltip" handleevent="true" tooltip="Delete"><i class="dcg-icon-remove"></i></span>
+      <span class="dcg-action-duplicate dcg-duplicate-btn dcg-tooltip" handleevent="true" tooltip="Duplicate"><i class="dcg-icon-duplicate"></i></span>
+      <span class="dcg-action-createtable dcg-tooltip dcg-disabled" tooltip="Convert to Table" handleevent="true">
+        <i class="dcg-icon-table"></i>
+      </span>
+    </nobr>
+  </span>
+</div></span>
+        <div class="dcg-expressionitem dcg-new-expression dcg-opened">
+  <div class="dcg-new-math-div dcg-do-not-blur dcg-action-newmath">
+    <div class="dcg-new-expression-fade"></div>
+  </div>
+
+  <span class="dcg-tab">
+     <span class="dcg-num dcg-variable-index">2</span>
+     <div class="dcg-tab-interior"></div>
+  </span>
+
+</div>
+
+        <a class="dcg-expressions-branding" href="https://www.desmos.com/" target="_blank">
+          <div class="dcg-powered-by">powered by</div>
+          <i class="dcg-icon-desmos"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+<div class="dcg-add-expression-dropdown dcg-popover dcg-bottom" style="display: none;">
+  <div class="dcg-popover-interior">
+     
+     <div class="dcg-new-item dcg-do-not-blur dcg-action-newexpression">
+        <i class="dcg-icon-new-expression dcg-expression-icon"></i>
+        expression
+     </div>
+     
+    
+     
+     <div class="dcg-new-item dcg-do-not-blur dcg-action-newtext">
+       <i class="dcg-icon-new-text dcg-expression-icon"></i>
+       note
+     </div>
+     
+
+     
+     <div class="dcg-new-item dcg-do-not-blur dcg-action-newtable">
+       <i class="dcg-icon-new-table dcg-expression-icon"></i>
+       table
+     </div>
+     
+     
+     
+     <div class="dcg-new-item dcg-do-not-blur dcg-action-newfolder">
+       <i class="dcg-icon-new-folder dcg-expression-icon"></i>
+       folder
+     </div>
+     
+
+     
+     <div class="dcg-new-item dcg-do-not-blur dcg-action-newimage">
+       <i class="dcg-icon-new-image dcg-expression-icon"></i>
+       image
+       
+       
+       <input type="file" accept="image/*" style="display: none">
+     </div>
+     
+
+   </div>
+
+   <span class="dcg-arrow"></span>
+</div></div>
+
+
+</div></div></div>
+  <div class="dcg-share-container dcg-popover dcg-bottom dcg-constrained-height-popover" style="display: none;">
+    <div class="dcg-popover-interior">
+
+    <!-- have a graph hash -->
+
+    <div class="dcg-popover-title">
+      Share your graph with the world!
+    </div>
+    <div class="dcg-popover-content">
+
+      <div class="dcg-loading">
+          <img src="./Desmos Graphing Calculator_files/spinner_dark.gif" width="16px" height="16px">
+          loading...
+      </div>
+
+      <div class="dcg-loaded" style="display: none;">
+        <br>
+        &nbsp; Share this link:
+        <input class="dcg-permalink select-all dcg-variable-permalink">
+
+        <form class="dcg-action-screenshoturl" target="_blank" method="post" action="https://www.desmos.com/screenshot/">
+          <div class="dcg-btn-group dcg-options-btns">
+            <span class="dcg-btn dcg-action-togglesection" section="email">Email</span>
+            <span class="dcg-btn dcg-action-togglesection" section="embed">Embed</span>
+            <input type="hidden" name="img" class="dcg-imgData">
+            <button type="submit" class="dcg-btn image-btn" section="image">Image</button>
+          </div>
+        </form>
+
+        <div class="dcg-email-div share-div" style="display: none;">
+          <div class="template-emailerrors"></div>
+          <form class="dcg-action-emailgraph">
+            <label>Send to:
+            <input type="email" multiple="multiple" name="recipients" required="required" class="first-input">
+            </label>
+
+            <label>Your Name:
+            <input type="text" name="name" required="required" class="dcg-variable-username">
+            </label>
+
+            <label>Message: <i>(optional)</i>
+            <textarea name="message" rows="3" class="dcg-share-message"></textarea>
+            </label>
+
+            <input type="hidden" name="hash" class="dcg-variable-graphhash" value="">
+            <button type="submit" class="dcg-btn dcg-btn-green" name="submit">Send</button>
+
+            <span class="email-status-notifications">
+              <span class="template-ifprocessing" style="display: none;">
+                <img src="./Desmos Graphing Calculator_files/spinner_dark.gif" width="16px" height="16px">
+                sending...
+              </span>
+            </span>
+          </form>
+        </div>
+        <div class="dcg-email-sent">
+          message sent
+        </div>
+
+        <div class="dcg-embed-div share-div" style="display: none;">
+          <label>
+            HTML Embed Code
+            <a href="http://support.desmos.com/entries/22449752-embedding-graphs-with-html" target="_blank">what's this?</a>
+            <textarea rows="4" class="select-all first-input dcg-variable-htmlembedcode"></textarea>
+          </label>
+  
+          <label>
+            BBCode
+            <a href="http://support.desmos.com/entries/22449762-embedding-graphs-in-forums-with-bbcode" target="_blank">what's this?</a>
+
+            <input rows="4" class="select-all dcg-variable-htmlembedcodebb">
+
+          </label>
+        </div>
+
+        <div class="template-iffeatureable" style="display: none;">
+          <div class="alert dcg-allow-feature">
+            <a type="button" class="close dcg-action-cancelfeature">
+              <i class="dcg-icon-remove"></i>
+            </a>
+            <div class="content">
+              <div class="dcg-title">
+                <b>Nice Graph!</b> <br> Want us to consider it for staff picks?
+              </div>
+              <span class="dcg-disallowFeature dcg-feature-btn dcg-action-togglefeature">
+                no, thanks
+              </span>
+              <span class="dcg-allowFeature dcg-feature-btn dcg-action-togglefeature dcg-active">
+                yes, please!
+              </span>
+              <div style="clear:both"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="dcg-arrow"></div>
+</div></div><div class="dcg-help-container dcg-popover dcg-bottom dcg-constrained-height-popover" style="display: none;">
+  <div class="dcg-popover-interior">
+
+
+    <div class="dcg-popover-title">Tours</div>
+    <div class="dcg-popover-content dcg-tours-content">
+      <!-- tours get inserted here -->
+    <a class="dcg-feature" href="https://www.desmos.com/calculator?tour=sliders" target="_blank">
+  <span class="dcg-thumb dcg-sliders"></span>
+  Sliders
+</a><a class="dcg-feature" href="https://www.desmos.com/calculator?tour=tables" target="_blank">
+  <span class="dcg-thumb dcg-tables"></span>
+  Tables
+</a><a class="dcg-feature" href="https://www.desmos.com/calculator?tour=restrictions" target="_blank">
+  <span class="dcg-thumb dcg-restrictions"></span>
+  Restrictions
+</a><a class="dcg-feature" href="https://www.desmos.com/calculator?tour=regressions" target="_blank">
+  <span class="dcg-thumb dcg-regressions"></span>
+  Regressions
+</a></div>
+
+    <div class="dcg-popover-title">Resources</div>
+    <div class="dcg-popover-content dcg-resources-content">
+      <div>
+        <a href="https://desmos.s3.amazonaws.com/Desmos_User_Guide.pdf" target="_blank">
+          <i class="dcg-icon-book"></i>
+          <span>Desmos User Guide</span>
+        </a>
+      </div>
+
+      <div>
+        <a href="http://support.desmos.com/categories/20081717-using-the-desmos-graphing-calculator" target="_blank">
+          <i class="dcg-icon-comments"></i>
+          <span>Help Center</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="dcg-popover-title dcg-interior-title">Feedback</div>
+    <div class="dcg-popover-content">
+      <div class="dcg-resources-content dcg-feedback-content">
+
+
+      <span class="dcg-feedback-twitter">
+        <a href="https://twitter.com/intent/tweet?text=Hey%2C%20%40desmos:%20I%27ve%20got%20a%20question!&via=desmos" target="_blank">
+          <i class="dcg-icon-twitter"></i>
+          <span>Tweet @desmos</span>
+        </a>
+       </span>
+       <span class="dcg-feedback-facebook">
+        <a href="https://www.facebook.com/desmosinc" target="_blank">
+          <i class="dcg-icon-facebook"></i>
+          <span>Tell us on Facebook</span>
+        </a>
+      </span>
+
+
+      </div>
+
+      
+
+      
+        <div class="dcg-suggestions">
+          <div class="template-errors"></div>
+          <div class="dcg-feedback-email-sent">
+            Thanks for the feedback – you'll hear from us soon!
+          </div>
+
+          <form class="dcg-action-submit">
+
+            <textarea placeholder="type your question or suggestion..." name="message"></textarea>
+            <div class="dcg-suggestions-expansion">
+              <div class="template-unlessuser" style="display: block;">
+                <div class="dcg-feedback-email-label">
+                  Please provide an email so that we can write back.
+                  <i>(optional)</i></div>
+                <input name="anonymous-email" class="dcg-anonymous-email" placeholder="your.name@test.com" type="email">
+              </div>
+              <span class="dcg-feedback-btns">
+                <a class="dcg-btn dcg-action-closesuggestion">
+                  Cancel
+                </a>
+                <button class="dcg-btn dcg-btn-green" name="submit" type="submit">
+                  Send Feedback
+                </button>
+                </span>
+
+              <div class="template-processing" style="display:none">
+                <img src="./Desmos Graphing Calculator_files/spinner_dark.gif" width="16px" height="16px"> sending...
+              </div>
+            </div>
+          </form>
+        </div>
+      
+    </div>
+  </div>
+  <div class="dcg-arrow"></div>
+</div><div class="dcg-language-container dcg-popover dcg-bottom dcg-constrained-height-popover" style="display: none;">
+
+  <div class="dcg-popover-interior">
+    <div class="dcg-popover-title">
+      Language
+    </div>
+    <div class="dcg-popover-content">
+      <table>
+        <tbody><tr>
+      
+       <td>
+        <div lang="en" class="dcg-language-option dcg-selected">
+            English (US)
+
+        </div>
+        </td>
+        
+
+      
+       <td>
+        <div lang="en-GB" class="dcg-language-option">
+            English (GB)
+
+        </div>
+        </td>
+        </tr><tr>
+
+      
+       <td>
+        <div lang="es-ES" class="dcg-language-option">
+            Español (España)
+
+        </div>
+        </td>
+        
+
+      
+       <td>
+        <div lang="ru" class="dcg-language-option">
+            Русский
+
+        </div>
+        </td>
+        </tr><tr>
+
+      
+       <td>
+        <div lang="de" class="dcg-language-option">
+            Deutsch
+
+        </div>
+        </td>
+        
+
+      
+       <td>
+        <div lang="pt-BR" class="dcg-language-option">
+            Português (Brasil)
+
+        </div>
+        </td>
+        </tr><tr>
+
+      
+       <td>
+        <div lang="pt-PT" class="dcg-language-option">
+            Português (Portugal)
+
+        </div>
+        </td>
+        
+
+      
+       <td>
+        <div lang="ca" class="dcg-language-option">
+            Català
+
+        </div>
+        </td>
+        </tr><tr>
+
+      
+       <td>
+        <div lang="fr" class="dcg-language-option">
+            Français
+
+        </div>
+        </td>
+        
+
+      
+       <td>
+        <div lang="it" class="dcg-language-option">
+            Italiano
+
+        </div>
+        </td>
+        </tr><tr>
+
+      
+       <td>
+        <div lang="nl" class="dcg-language-option">
+            Nederlands
+
+        </div>
+        </td>
+        
+
+      
+       <td>
+        <div lang="no" class="dcg-language-option">
+            Norsk
+
+        </div>
+        </td>
+        </tr><tr>
+
+      
+       <td>
+        <div lang="sv-SE" class="dcg-language-option">
+            Svenska
+
+        </div>
+        </td>
+        
+
+      
+       <td>
+        <div lang="hr" class="dcg-language-option">
+            Hrvatski
+
+        </div>
+        </td>
+        </tr><tr>
+
+      
+       <td>
+        <div lang="da" class="dcg-language-option">
+            Dansk
+
+        </div>
+        </td>
+        
+
+      
+       <td>
+        <div lang="cs" class="dcg-language-option">
+            Čeština
+
+        </div>
+        </td>
+        </tr><tr>
+
+      
+       <td>
+        <div lang="tr" class="dcg-language-option">
+            Türkçe
+
+        </div>
+        </td>
+        
+
+      
+       <td>
+        <div lang="sl" class="dcg-language-option">
+            Slovenščina
+
+        </div>
+        </td>
+        </tr><tr>
+
+      
+       <td>
+        <div lang="lt" class="dcg-language-option">
+            Lietuvių
+
+        </div>
+        </td>
+        
+
+      
+       <td>
+        <div lang="pl" class="dcg-language-option">
+            Polski
+
+        </div>
+        </td>
+        </tr><tr>
+
+      
+       <td>
+        <div lang="ro" class="dcg-language-option">
+            Română
+
+        </div>
+        </td>
+        
+
+      
+       <td>
+        <div lang="id" class="dcg-language-option">
+            Bahasa Indonesia
+
+        </div>
+        </td>
+        </tr><tr>
+
+      
+       <td>
+        <div lang="vi" class="dcg-language-option">
+            Tiếng Việt
+
+        </div>
+        </td>
+        
+
+      
+       <td>
+        <div lang="el" class="dcg-language-option">
+            Ελληνικά
+
+        </div>
+        </td>
+        </tr><tr>
+
+      
+       <td>
+        <div lang="sr-CS" class="dcg-language-option">
+            SRPSKI
+
+        </div>
+        </td>
+        
+
+      
+       <td>
+        <div lang="bg" class="dcg-language-option">
+            Български
+
+        </div>
+        </td>
+        </tr><tr>
+
+      
+       <td>
+        <div lang="mk" class="dcg-language-option">
+            Македонски
+
+        </div>
+        </td>
+        
+
+      
+       <td>
+        <div lang="uk" class="dcg-language-option">
+            Українська
+
+        </div>
+        </td>
+        </tr><tr>
+
+      
+       <td>
+        <div lang="th" class="dcg-language-option">
+            ภาษาไทย
+
+        </div>
+        </td>
+        
+
+      
+       <td>
+        <div lang="zh-CN" class="dcg-language-option">
+            简体中文
+
+        </div>
+        </td>
+        </tr><tr>
+
+      
+       <td>
+        <div lang="zh-TW" class="dcg-language-option">
+            繁體中文
+
+        </div>
+        </td>
+        
+
+      
+       <td>
+        <div lang="ko" class="dcg-language-option">
+            한국어
+
+        </div>
+        </td>
+        </tr><tr>
+
+      
+       <td>
+        <div lang="ja" class="dcg-language-option">
+            日本語
+
+        </div>
+        </td>
+        
+
+      
+        </tr>
+      </tbody></table>
+
+      <div class="dcg-translate-invite">
+        Don't see your language?
+        <a target="_blank" href="http://support.desmos.com/entries/28346817-Help-us-translate-Desmos-">
+          Help us translate
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="dcg-arrow"></div>
+</div><div class="dcg-logout-options dcg-popover dcg-bottom" style="display: none;">
+  <div class="dcg-popover-interior">
+    <div class="dcg-popover-content">
+      <div class="user-info">
+        <span class="account-name"></span>
+        <span class="account-email"></span>
+        <a class="dcg-action-editaccount">Edit Account</a>
+      </div>
+      <a class="dcg-action-feedback">Send Feedback</a>
+      <a class="dcg-action-logout">Sign Out</a> 
+    </div>
+  </div>
+  <div class="dcg-arrow"></div>
+</div></div>
+
+  
+<!-- 1pixel white image for printing in FF -->
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wLEhYhKmtn2wYAAAAidEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVAgb24gYSBNYWOHqHdDAAAADElEQVQI12P4//8/AAX+Av7czFnnAAAAAElFTkSuQmCC" id="whitebg">
+ <!-- 1 white pixel for printing in FF -->
+  
+
+
+<script type="text/javascript">
+  if(!window.Desmos) window.Desmos = {};
+  window.Desmos.config = {};
+</script>
+ <!-- Pull config information, and include it in Desmos.config -->
+  <!-- TODO - get console and pushstate into regular .js files -->
+  <script type="text/javascript">
+  if(!window.console) window.console = {};
+  if(!window.console.log) window.console.log = function(){};
+</script>
+ <!-- Make sure console.log is defined -->
+  <script type="text/javascript">
+  if(window.location.protocol === 'file:')
+    window.history.pushState = function(){};
+</script>
+ <!-- Make sure we don't use pushstate on file protocol -->
+
+    <script src="ga.js"></script>
+    <script src="grphr.js"></script>
+  <script>
+    require(['toplevel/calculator_desktop', 'testbridge'], function (calc, TestBridge) {
+      TestBridge.ready();
+    });
+  </script>
+
+
+<div class="dcg-mygraphs">
+
+  <div class="dcg-loading-container dcg-fullscreen-loading-container">
+    <div class="dcg-graph-loading">
+      Loading...
+    </div>
+    <div class="dcg-graph-loading-error">
+      <div class="dcg-graph-loading-error-title">Error loading graph</div>
+      <div class="dcg-graph-loading-error-subtitle">Check your internet connection?</div>
+      <div class="dcg-graph-loading-error-options">
+        <span class="dcg-action-try-again dcg-btn-blue dcg-btn dcg-btn-medium">Try Again</span>
+        or
+        <span class="dcg-action-cancel dcg-btn-light-gray dcg-btn dcg-btn-medium">Cancel</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="dcg-resources-container">
+    <div class="search-container">
+      <input id="search-mygraphs" type="text" placeholder="search by title...">
+      <span class="dcg-icon-search search-icon"></span>
+    </div>
+    <div class="dcg-scrollable">
+
+      
+
+        
+          <div class="login-reminder" style="display: block;">
+            <a class="dcg-btn dcg-action-createaccount">
+              Create Account
+            </a>
+            or
+            <a class="dcg-action-login">
+              Sign In
+            </a>
+            <div>
+              to save and share your graphs!
+            </div>
+          </div>
+        
+
+        <div class="new-blank-graph dcg-action-newblankgraph">
+          <div class="new-blank-graph-inner">
+            <span>+</span> New Blank Graph
+          </div>
+        </div>
+
+        
+          <div class="template-spinning" style="display: none;">
+            <img src="./Desmos Graphing Calculator_files/spinner.gif" width="16px" height="16px"> loading graphs...
+          </div>
+        
+
+      
+
+      <ul class="template-list">
+
+      <li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/59qdbtnlzy.png)"></span>
+  <span class="dcg-title">Lines: Slope Intercept Form</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/vphpgabluz.png)"></span>
+  <span class="dcg-title">Lines: Point Slope Form</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/slkjzmm3ly.png)"></span>
+  <span class="dcg-title">Lines: Two Point Form</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/cmz3dawdji.png)"></span>
+  <span class="dcg-title">Lines: Intercept Form</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/4acfppghta.png)"></span>
+  <span class="dcg-title">Lines: General Form</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/h4kwopbouh.png)"></span>
+  <span class="dcg-title">Lines: Visualizing Slope</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/3ltwect0mc.png)"></span>
+  <span class="dcg-title">Parabolas: Standard Form</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/mey71rif1d.png)"></span>
+  <span class="dcg-title">Parabolas: Vertex Form</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/qgxlpjyebd.png)"></span>
+  <span class="dcg-title">Parabolas: Factored Form</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/bqr4ko6wi9.png)"></span>
+  <span class="dcg-title">Parabolas: Standard Form with Tangent</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/pjtapprsyt.png)"></span>
+  <span class="dcg-title">Trigonometry: Period and Amplitude</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/rfo6v7r5vg.png)"></span>
+  <span class="dcg-title">Trigonometry: Phase</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/v3hgzjtpo5.png)"></span>
+  <span class="dcg-title">Trigonometry: All the Trig Functions</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/ae1kce4fwm.png)"></span>
+  <span class="dcg-title">Trigonometry: Wave Interference</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/aer4wpiiad.png)"></span>
+  <span class="dcg-title">Trigonometry: Unit Circle</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/bkmtndf38y.png)"></span>
+  <span class="dcg-title">Conic Sections: Circle</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/naug1puabq.png)"></span>
+  <span class="dcg-title">Conic Sections: Parabola and Focus</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/fwn45vpf2z.png)"></span>
+  <span class="dcg-title">Conic Sections: Ellipse with Foci</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/321ynqvpjh.png)"></span>
+  <span class="dcg-title">Conic Sections: Hyperbola</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/zg6mokdc9e.png)"></span>
+  <span class="dcg-title">Polar Graphing: Polar Rose</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/ucm7smj9fz.png)"></span>
+  <span class="dcg-title">Polar Graphing: Logarithmic Spiral</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/ie57pljxzm.png)"></span>
+  <span class="dcg-title">Polar Graphing: Limacon</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/kk3axf8oon.png)"></span>
+  <span class="dcg-title">Polar Graphing: Polar Conic Sections</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/0ksctv1hm4.png)"></span>
+  <span class="dcg-title">Transformations: Translating Any Function</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/doxva7ciht.png)"></span>
+  <span class="dcg-title">Transformations: Scaling Any Function</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/ynmlumjvz8.png)"></span>
+  <span class="dcg-title">Transformations: Reflections of a Function</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/tif5liedlj.png)"></span>
+  <span class="dcg-title">Transformations: Inverse of a Function</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/aqgbwm3qfd.png)"></span>
+  <span class="dcg-title">Calculus: Derivatives</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/irip8pnpdf.png)"></span>
+  <span class="dcg-title">Calculus: Secant Line</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/dlzhsldcgo.png)"></span>
+  <span class="dcg-title">Calculus: Tangent Line</span>
+  <span class="date">example</span>
+</li><li class="dcg-action-preview-graph graph-link-container example-graph" style="display: list-item;">
+  <span class="dcg-example-ribbon"></span>
+  <span class="dcg-example-text">example</span>
+  <span class="dcg-thumb" style="background-image: url(https://s3.amazonaws.com/calc_thumbs/production/gkjridbqfj.png)"></span>
+  <span class="dcg-title">Calculus: Taylor Expansion of sin(x)</span>
+  <span class="date">example</span>
+</li></ul>
+      <div class="no-matches" style="display: none;">
+        Sorry, we didn't find any graphs with that title.
+      </div>
+      <div class="dcg-mygraphs-branding">
+        <i class="dcg-icon-desmos"></i>
+      </div>
+    </div>
+
+
+    <div class="graph-preview">
+      <span class="dcg-btn dcg-pull-right dcg-btn-medium dcg-btn-light-gray dcg-action-cancel">
+        Cancel
+      </span>
+      <h4 class="dcg-title"></h4>
+      <div class="screenshot-container">
+        <div id="preview-calculator"><div class="dcg-container dcg-tap-container dcg-no-settings-menu dcg-no-expression-topbar dcg-no-zoom dcg-no-branding dcg-narrow dcg-short"><div class="dcg-grapher" style="overflow: hidden; left: 0px; width: 100px;"><div class="dcg-graph-outer" unselectable="on" style="position: absolute; overflow: hidden; -webkit-user-select: none; width: 100px; height: 100px;"><canvas class="dcg-graph-inner" unselectable="on" width="100" height="100" style="position: relative; display: block; -webkit-user-select: none; width: 100px; height: 100px;"></canvas></div><div class="dcg-graph-outer" unselectable="on" style="position: absolute; overflow: hidden; -webkit-user-select: none; width: 100px; height: 100px;"><canvas class="dcg-graph-inner" unselectable="on" width="100" height="100" style="position: relative; display: block; -webkit-user-select: none; width: 100px; height: 100px;"></canvas></div><div class="dcg-graph-outer dcg-poi-dots-layer" unselectable="on" style="position: absolute; overflow: hidden; -webkit-user-select: none; width: 100px; height: 100px;"><canvas class="dcg-graph-inner" unselectable="on" width="100" height="100" style="position: relative; display: block; -webkit-user-select: none; width: 100px; height: 100px;"></canvas></div><div class="dcg-graph-outer" unselectable="on" style="position: absolute; overflow: hidden; -webkit-user-select: none; width: 100px; height: 100px;"><canvas class="dcg-graph-inner" unselectable="on" width="100" height="100" style="position: relative; display: block; -webkit-user-select: none; width: 100px; height: 100px;"></canvas></div><div class="dcg-graph-outer" unselectable="on" style="position: absolute; overflow: hidden; -webkit-user-select: none; z-index: 0; width: 100px; height: 100px;"><div unselectable="on" style="position: relative; display: block; -webkit-user-select: none; width: 100px; height: 100px;"></div></div><div class="dcg-graph-outer dcg-poi-labels-layer" unselectable="on" style="position: absolute; overflow: hidden; -webkit-user-select: none; z-index: 0; width: 100px; height: 100px;"><div unselectable="on" style="position: relative; display: block; -webkit-user-select: none; width: 100px; height: 100px;"></div></div><div class="dcg-graph-outer dcg-trace-layer" unselectable="on" style="position: absolute; overflow: hidden; -webkit-user-select: none; z-index: 0; width: 100px; height: 100px;"><div unselectable="on" style="position: relative; display: block; -webkit-user-select: none; width: 100px; height: 100px;"></div></div></div><div class="dcg-toast-container" style="display: none;">
+  <span class="dcg-toast">
+    <i class="dcg-icon-error"></i>
+    <i class="dcg-icon-remove dcg-action-hide"></i>
+    <span class="dcg-msg dcg-variable-msg"></span>
+    <a class="dcg-undo dcg-action-toast-undo">Undo</a>
+    <a class="dcg-learn-more-link" target="_blank">Learn more</a>
+  </span>
+</div><div class="dcg-pillbox-container">
+
+  <div class="dcg-settings-pillbox dcg-tooltip-e dcg-action-settings" tooltip="Graph Settings">
+    <i class="dcg-icon-wrench"></i>
+  </div>
+
+  <div class="dcg-zoom-container">
+    <div class="dcg-zoominout-pillbox">
+      <div class="dcg-action-zoomin dcg-tooltip-e" tooltip="Zoom In">
+        <i class="dcg-icon dcg-icon-plus"></i>
+      </div>
+      <div class="dcg-option dcg-action-zoomout dcg-tooltip-e" tooltip="Zoom Out">
+        <i class="dcg-icon dcg-icon-minus"></i>
+      </div>
+    </div>
+    <div class="dcg-option dcg-action-zoomrestore dcg-tooltip-e dcg-disabled" tooltip="Default Zoom">
+      <i class="dcg-icon dcg-icon-home"></i>
+    </div>
+  </div>
+
+  <div class="dcg-graphpaper-branding">
+    <div class="dcg-powered-by">powered by</div>
+    <i class="dcg-icon-desmos"></i>
+  </div>
+<div></div><div class="dcg-settings-container dcg-left dcg-popover dcg-constrained-height-popover" style="display: none;">
+    <div class="dcg-popover-interior">
+      <div class="dcg-popover-fixedwidth">
+        <div class="dcg-popover-content">
+          <div class="dcg-modern-btn dcg-action-projectormode">Projector Mode</div>
+        </div>
+
+        <div class="dcg-popover-content dcg-graph-settings">
+
+          <div class="dcg-section-title">
+            Graph Paper
+          </div>
+
+          <div class="dcg-grid-settings">
+            <div class="dcg-polargroup">
+              <div class="dcg-icon dcg-action-cartesian dcg-active"></div>
+              <div class="dcg-icon dcg-action-polar"></div>
+              <div class="dcg-title">Grid</div>
+            </div>
+
+            <span class="dcg-checkbox dcg-action-zoomsquare dcg-disabled dcg-checked">
+              <span class="dcg-checkbox-box"><i class="dcg-icon-check"></i></span>
+              <span class="dcg-checkbox-label">Square Grid</span>
+            </span>
+            <div style="clear:both"></div>
+          </div>
+
+          <div class="dcg-collapsable-options dcg-x-axis-options dcg-collapsed">
+            <div class="dcg-icon dcg-x-arrows dcg-display-icon dcg-active" dcg-arrows="NONE"><i class="dcg-icon-hidden"></i></div>
+
+            <div class="dcg-title-container">
+              <div class="dcg-caret-container"><i class="dcg-icon-caret-down"></i></div>
+              <div class="dcg-title">X-Axis</div>
+            </div>
+            <input class="dcg-axis-label dcg-x-axis-label" placeholder="add label">
+
+            <div class="dcg-readonly-inputs">
+              <div class="dcg-readonly-mathquill-container">
+                <span class="dcg-action-editinput mq-math-mode" data-dcg-limit="xmin"><span class="mq-selectable">$$</span><span class="mq-root-block" mathquill-block-id="874"><span mathquill-command-id="946" class="">−</span><span mathquill-command-id="948">1</span><span mathquill-command-id="950">0</span></span></span><span class="dcg-interval-interior mq-math-mode"><span class="mq-binary-operator">≤</span><var>x</var><span class="mq-binary-operator">≤</span></span><span class="dcg-action-editinput mq-math-mode" data-dcg-limit="xmax"><span class="mq-selectable">$$</span><span class="mq-root-block" mathquill-block-id="876"><span mathquill-command-id="952">1</span><span mathquill-command-id="954">0</span></span></span>
+              </div>
+              <div class="dcg-readonly-mathquill-container dcg-step-container" style="display: block;">
+                <span class="dcg-step-label">Step:</span>
+                <span class="dcg-action-editinput mq-math-mode" data-dcg-limit="xstep"><span class="mq-selectable">$$</span><span class="mq-root-block" mathquill-block-id="878"><span mathquill-command-id="1064">2</span><span mathquill-command-id="1066">0</span></span></span>
+              </div>
+              <div style="clear:both"></div>
+
+            </div>
+
+            <div class="dcg-editable-inputs">
+              <div class="dcg-editable-mathquill-container">
+                <span class="dcg-math-field mq-editable-field mq-math-mode dcg-math-input" data-dcg-limit="xmin"><span class="mq-textarea"><textarea readonly=""></textarea></span><span class="mq-root-block" mathquill-block-id="914"><span mathquill-command-id="926" class="">−</span><span mathquill-command-id="928">1</span><span mathquill-command-id="930">0</span></span></span>
+                <span class="dcg-interval-interior mq-math-mode"><span class="mq-binary-operator">≤</span><var>x</var><span class="mq-binary-operator">≤</span></span>
+                <span class="dcg-math-field mq-editable-field mq-math-mode dcg-math-input" data-dcg-limit="xmax"><span class="mq-textarea"><textarea readonly=""></textarea></span><span class="mq-root-block" mathquill-block-id="916"><span mathquill-command-id="932">1</span><span mathquill-command-id="934">0</span></span></span>
+                <span class="dcg-step-container" style="display: inline;">
+                  <span class="dcg-step-label">Step:</span>
+                  <span class="dcg-math-field mq-editable-field mq-math-mode dcg-math-input" data-dcg-limit="xstep"><span class="mq-textarea"><textarea readonly=""></textarea></span><span class="mq-root-block mq-empty" mathquill-block-id="918"></span></span>
+                </span>
+              </div>
+            </div>
+
+            <div class="dcg-more-options">
+              <span>
+                <div class="dcg-arrows-label">Arrows:</div>
+                <div class="dcg-icon dcg-x-arrows dcg-active" dcg-arrows="NONE"></div>
+                <div class="dcg-icon dcg-x-arrows" dcg-arrows="POSITIVE"></div>
+                <div class="dcg-icon dcg-x-arrows" dcg-arrows="BOTH"></div>
+              </span>
+              <span class="dcg-checkbox dcg-action-xaxisnumbers dcg-checked">
+                <span class="dcg-checkbox-box"><i class="dcg-icon-check"></i></span>
+                <span class="dcg-checkbox-label">Show Numbers</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="dcg-collapsable-options dcg-y-axis-options dcg-collapsed">
+            <div class="dcg-icon dcg-y-arrows dcg-display-icon dcg-active" dcg-arrows="NONE"><i class="dcg-icon-hidden"></i></div>
+
+            <div class="dcg-title-container">
+              <div class="dcg-caret-container"><i class="dcg-icon-caret-down"></i></div>
+              <div class="dcg-title">Y-Axis</div>
+            </div>
+            <input class="dcg-axis-label dcg-y-axis-label" placeholder="add label">
+
+            <div class="dcg-readonly-inputs">
+              <div class="dcg-readonly-mathquill-container">
+                <span class="dcg-action-editinput mq-math-mode" data-dcg-limit="ymin"><span class="mq-selectable">$$</span><span class="mq-root-block" mathquill-block-id="880"><span mathquill-command-id="956" class="">−</span><span mathquill-command-id="958">1</span><span mathquill-command-id="960">0</span></span></span><span class="dcg-interval-interior mq-math-mode"><span class="mq-binary-operator">≤</span><var>y</var><span class="mq-binary-operator">≤</span></span><span class="dcg-action-editinput mq-math-mode" data-dcg-limit="ymax"><span class="mq-selectable">$$</span><span class="mq-root-block" mathquill-block-id="882"><span mathquill-command-id="962">1</span><span mathquill-command-id="964">0</span></span></span>
+              </div>
+              <div class="dcg-readonly-mathquill-container dcg-step-container" style="display: block;">
+                <span class="dcg-step-label">Step:</span>
+                <span class="dcg-action-editinput mq-math-mode" data-dcg-limit="ystep"><span class="mq-selectable">$$</span><span class="mq-root-block" mathquill-block-id="884"><span mathquill-command-id="1068">2</span><span mathquill-command-id="1070">0</span></span></span>
+              </div>
+              <div style="clear:both"></div>
+            </div>
+
+            <div class="dcg-editable-inputs">
+              <div class="dcg-editable-mathquill-container">
+                <span class="dcg-math-field mq-editable-field mq-math-mode dcg-math-input" data-dcg-limit="ymin"><span class="mq-textarea"><textarea readonly=""></textarea></span><span class="mq-root-block" mathquill-block-id="920"><span mathquill-command-id="936" class="">−</span><span mathquill-command-id="938">1</span><span mathquill-command-id="940">0</span></span></span>
+                <span class="dcg-interval-interior mq-math-mode"><span class="mq-binary-operator">≤</span><var>y</var><span class="mq-binary-operator">≤</span></span>
+                <span class="dcg-math-field mq-editable-field mq-math-mode dcg-math-input" data-dcg-limit="ymax"><span class="mq-textarea"><textarea readonly=""></textarea></span><span class="mq-root-block" mathquill-block-id="922"><span mathquill-command-id="942">1</span><span mathquill-command-id="944">0</span></span></span>
+                <span class="dcg-step-container" style="display: inline;">
+                  <span class="dcg-step-label">Step:</span>
+                  <span class="dcg-math-field mq-editable-field mq-math-mode dcg-math-input" data-dcg-limit="ystep"><span class="mq-textarea"><textarea readonly=""></textarea></span><span class="mq-root-block mq-empty" mathquill-block-id="924"></span></span>
+                </span>
+              </div>
+            </div>
+
+            <div class="dcg-more-options">
+              <span>
+                <div class="dcg-arrows-label">Arrows:</div>
+                <div class="dcg-icon dcg-y-arrows dcg-active" dcg-arrows="NONE"></div>
+                <div class="dcg-icon dcg-y-arrows" dcg-arrows="POSITIVE"></div>
+                <div class="dcg-icon dcg-y-arrows" dcg-arrows="BOTH"></div>
+              </span>
+              <span class="dcg-checkbox dcg-action-yaxisnumbers dcg-checked">
+                <span class="dcg-checkbox-box"><i class="dcg-icon-check"></i></span>
+                <span class="dcg-checkbox-label">Show Numbers</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="dcg-section-title">
+            Angles
+          </div>
+          <div class="dcg-radiangroup">
+            <div class="dcg-action-degreemode dcg-modern-btn">Degrees</div>
+            <div class="dcg-action-radianmode dcg-modern-btn dcg-active">Radians</div>
+
+            <div class="dcg-polarnumbers-container">
+              <span class="dcg-checkbox dcg-action-polarnumbers dcg-checked" style="display: none;">
+                <span class="dcg-checkbox-box"><i class="dcg-icon-check"></i></span>
+                <span class="dcg-checkbox-label">Show Grid Angles</span>
+              </span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="dcg-arrow"></div>
+    </div>
+</div></div><div>
+
+<div class="dcg-show-expressions-tab">
+  <a class="dcg-resize-list-btn dcg-action-showexpressions dcg-tooltip" tooltip="Show List">
+    <i class="dcg-icon-show"></i>
+  </a>
+</div>
+
+
+<div class="dcg-exppanel-outer">
+  <div class="dcg-exppanel-container dcg-do-animate" style="max-width: 290px; min-width: 290px;">
+    <div class="dcg-expression-top-bar">
+      <a class="dcg-btn dcg-btn-medium dcg-pull-left dcg-hide-in-edit dcg-add-expression-btn dcg-action-add-expression dcg-tooltip dcg-do-not-blur" handleevent="true" tooltip="Add Item"><i class="dcg-icon-plus"></i><i class="dcg-icon-caret-down"></i></a>
+
+      <a class="dcg-btn dcg-btn-red dcg-btn-medium dcg-pull-left dcg-show-in-edit dcg-action-clearall"> Delete All</a>
+      <span class="dcg-center-aligned dcg-show-in-edit">
+        <a class="dcg-action-undo dcg-tooltip" tooltip="Undo (ctrl+z)"><i class="dcg-icon-undo"></i></a>
+        <a class="dcg-action-redo dcg-tooltip" tooltip="Redo (ctrl+y)"><i class="dcg-icon-redo"></i></a>
+      </span>
+
+      <a class="dcg-resize-list-btn dcg-hide-in-edit dcg-action-hideexpressions dcg-tooltip" tooltip="Hide List"><i class="dcg-icon-hide"></i></a>
+
+      <a class="dcg-btn dcg-btn-medium dcg-pull-right dcg-action-toggle-edit dcg-hide-in-edit dcg-tooltip dcg-do-not-blur" handleevent="true" tooltip="Edit List">
+        <i class="dcg-icon-settings"></i>
+      </a>
+      <a class="dcg-btn dcg-btn-blue dcg-btn-medium dcg-pull-right dcg-action-toggle-edit dcg-show-in-edit dcg-do-not-blur" handleevent="true">
+          Done
+      </a>
+    </div>
+
+    <div class="dcg-exppanel dcg-disable-horizontal-scroll-to-cursor">
+
+      <div class="dcg-drop-image">
+        <span>Drop Image Here</span>
+      </div>
+
+      <div class="dcg-expressionlist">
+        <span class="dcg-template-expressioneach"><div class="dcg-do-not-blur dcg-expressionitem dcg-mathitem" expr-id="1" index="0">
+  <div class="dcg-fade-container">
+
+    <div class="dcg-fadeout-left"></div>
+
+    <span class="dcg-main">
+      <span class="dcg-math-field dcg-transient-mathquill mq-editable-field mq-math-mode" style="display: none;"><span class="mq-textarea"><textarea readonly=""></textarea></span><span class="mq-root-block mq-empty" mathquill-block-id="968"></span></span>
+      <span class="dcg-math-field dcg-template-mathquill mq-editable-field mq-math-mode"><span class="mq-textarea"><textarea readonly=""></textarea></span><span class="mq-root-block mq-empty" mathquill-block-id="966"></span></span>
+    </span>
+
+    <span class="dcg-fadeout"></span>
+    <i class="dcg-icon-remove dcg-top-level-delete dcg-action-delete" handleevent="true"></i>
+
+    <div class="dcg-slider-speed-container dcg-do-not-blur" handleevent="true">
+      <span class="dcg-action-slower">«</span>
+      <span class="dcg-variable-speed"></span>
+      <span class="dcg-action-faster">»</span>
+    </div>
+
+    <div class="dcg-template-bottom-container dcg-fixed-width-element" style="width: 290px;">
+      <div class="dcg-template-bottom"></div>
+    </div>
+  </div>
+
+  <span class="dcg-tab dcg-action-drag dcg-action-icon-touch" handleevent="true" tapboundary="true" disablescroll="true">
+    <span class="dcg-num dcg-variable-index">1</span>
+    <span class="dcg-tab-interior dcg-action-icon-mouse">
+      <span class="dcg-icon dcg-graph-icon dcg-variable-colorcss dcg-variable-errortooltip tipsy-sticky dcg-ungraphable" tooltip="" style="border-color: rgb(192, 80, 77); background: rgb(192, 80, 77);">
+	<i class="dcg-icon-play"></i>
+	<i class="dcg-icon-pause"></i>
+	<i class="dcg-icon-hidden"></i>
+</span>
+    </span>
+  </span>
+
+
+  <span class="dcg-exp-actions">
+    <span class="dcg-graphic" handleevent="true"></span>
+    <nobr>
+      <span class="dcg-action-delete dcg-delete-btn dcg-tooltip" handleevent="true" tooltip="Delete"><i class="dcg-icon-remove"></i></span>
+      <span class="dcg-action-duplicate dcg-duplicate-btn dcg-tooltip" handleevent="true" tooltip="Duplicate"><i class="dcg-icon-duplicate"></i></span>
+      <span class="dcg-action-createtable dcg-tooltip dcg-disabled" tooltip="Convert to Table" handleevent="true">
+        <i class="dcg-icon-table"></i>
+      </span>
+    </nobr>
+  </span>
+</div></span>
+        <div class="dcg-expressionitem dcg-new-expression dcg-opened">
+  <div class="dcg-new-math-div dcg-do-not-blur dcg-action-newmath">
+    <div class="dcg-new-expression-fade"></div>
+  </div>
+
+  <span class="dcg-tab">
+     <span class="dcg-num dcg-variable-index">2</span>
+     <div class="dcg-tab-interior"></div>
+  </span>
+
+</div>
+
+        <a class="dcg-expressions-branding" href="https://www.desmos.com/" target="_blank">
+          <div class="dcg-powered-by">powered by</div>
+          <i class="dcg-icon-desmos"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+<div class="dcg-add-expression-dropdown dcg-popover dcg-bottom" style="display: none;">
+  <div class="dcg-popover-interior">
+     
+     <div class="dcg-new-item dcg-do-not-blur dcg-action-newexpression">
+        <i class="dcg-icon-new-expression dcg-expression-icon"></i>
+        expression
+     </div>
+     
+    
+     
+     <div class="dcg-new-item dcg-do-not-blur dcg-action-newtext">
+       <i class="dcg-icon-new-text dcg-expression-icon"></i>
+       note
+     </div>
+     
+
+     
+     <div class="dcg-new-item dcg-do-not-blur dcg-action-newtable">
+       <i class="dcg-icon-new-table dcg-expression-icon"></i>
+       table
+     </div>
+     
+     
+     
+     <div class="dcg-new-item dcg-do-not-blur dcg-action-newfolder">
+       <i class="dcg-icon-new-folder dcg-expression-icon"></i>
+       folder
+     </div>
+     
+
+     
+     <div class="dcg-new-item dcg-do-not-blur dcg-action-newimage">
+       <i class="dcg-icon-new-image dcg-expression-icon"></i>
+       image
+       
+       
+       <input type="file" accept="image/*" style="display: none">
+     </div>
+     
+
+   </div>
+
+   <span class="dcg-arrow"></span>
+</div></div>
+
+
+</div></div></div>
+        <div class="screenshot-clickjack dcg-action-open-graph">
+          <span class="dcg-btn dcg-action-open-graph dcg-open-graph-btn dcg-btn-medium dcg-btn-blue">
+            Open Graph
+          </span>
+        </div>
+
+        <div class="dcg-loading-container dcg-inline-loading-container">
+          <div class="dcg-graph-loading">
+            Loading...
+          </div>
+          <div class="dcg-graph-loading-error">
+            <div class="dcg-graph-loading-error-title">Error loading graph</div>
+            <div class="dcg-graph-loading-error-subtitle">Check your internet connection?</div>
+            <div class="dcg-graph-loading-error-options">
+              <span class="dcg-action-try-again dcg-btn-blue dcg-btn dcg-btn-medium">Try Again</span>
+              or
+              <span class="dcg-action-cancel dcg-btn-light-gray dcg-btn dcg-btn-medium">Cancel</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="active-arrow"><div class="dcg-graphic"></div></div>
+    </div>
+  </div>
+
+  <div id="resources-cover" class="dcg-action-close-resources"></div>
+</div></body></html>

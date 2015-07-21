@@ -1,0 +1,14 @@
+{
+  "name": "Graphr",
+  "homepage": "https://github.com/yerich/Graphr",
+  "_release": "bbc3db6bef",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "bbc3db6bef3b132847806f17849662e06d0abb9c"
+  },
+  "_source": "https://github.com/yerich/Graphr.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/yerich/Graphr.git",
+  "_direct": true
+}

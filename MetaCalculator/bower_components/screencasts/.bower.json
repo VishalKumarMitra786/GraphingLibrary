@@ -1,0 +1,14 @@
+{
+  "name": "screencasts",
+  "homepage": "https://github.com/curran/screencasts",
+  "_release": "38d91c5216",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "38d91c5216d9619c63735259883ce0bf1f675a8b"
+  },
+  "_source": "https://github.com/curran/screencasts.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/curran/screencasts.git",
+  "_direct": true
+}

@@ -1,0 +1,14 @@
+{
+  "name": "js-expression-eval",
+  "homepage": "https://github.com/silentmatt/js-expression-eval",
+  "_release": "3fd38bee4c",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "3fd38bee4c9c7d4f1e000d76aac7d5f0379ac448"
+  },
+  "_source": "https://github.com/silentmatt/js-expression-eval.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/silentmatt/js-expression-eval.git",
+  "_direct": true
+}
